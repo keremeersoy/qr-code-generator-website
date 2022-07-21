@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #FFE3A9;
+}
+
+.home{
+    height: 300px;
+    background: #fff;
+    max-width: 700px;
+    border-radius: 20px;
+    padding: 20px;
+    transition: height 0.2s ease;
+}
+
+.home.active{
+    height: 700px;
+}
+
+.home header h1,
+.home header p,
+.generated-qr{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+.link-input{
+    margin: 15px 100px;   
+}
+
+.link-input button{
+    font-size: 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #C2DED1;
+}
+
+.home p,
+.link-input input{
+    font-size: 22px;
+}
+
+.link-input :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+}
+
+.generated-qr{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.generated-qr img{
+    margin: 15px;
+    width: 350px;
+}
+
+.home.active .generated-qr{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
